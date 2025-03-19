@@ -1,70 +1,73 @@
-File Encryption and Decryption System
+# File Encryption and Decryption System
 
-📌 Overview
+## Overview
+This project provides a simple yet effective **file encryption and decryption system** using the XOR cipher. It consists of two C programs:
 
-This project provides a simple yet effective file encryption and decryption system using the XOR cipher. It consists of two C programs:
+- **`encrypt.c`**: Encrypts a given file using a randomly generated key and produces two output files: an encrypted file and a key file.
+- **`decrypt.c`**: Uses the key file to decrypt the encrypted file and recover the original content.
 
-encrypt.c: Encrypts a given file using a randomly generated key and produces two output files: an encrypted file and a key file.
+## Features
+- ✅ Uses a **one-time pad (OTP)** style XOR encryption for security.
+- ✅ Generates a **unique key** for every character in the input file.
+- ✅ Supports **encryption and decryption** of any text-based file.
+- ✅ Ensures **platform compatibility** with Windows and Linux.
 
-decrypt.c: Uses the key file to decrypt the encrypted file and recover the original content.
-
-✨ Features
-
-✅ Uses a one-time pad (OTP) style XOR encryption for security.✅ Generates a unique key for every character in the input file.✅ Supports encryption and decryption of any text-based file.✅ Ensures platform compatibility with Windows and Linux.
-
-📂 File Outputs
-
+## File Outputs
 After running the encryption process, the following files are generated:
 
-crypt.out - The encrypted file containing unreadable data.
-
-key.out - A key file necessary to decrypt crypt.out.
+- 📄 **`crypt.out`** - The encrypted file containing unreadable data.
+- 🔑 **`key.out`** - A key file necessary to decrypt `crypt.out`.
 
 After decryption, the following file is generated:
 
-decrypt.out - The original file restored from crypt.out.
+- 🔓 **`decrypt.out`** - The original file restored from `crypt.out`.
 
-⚙️ Compilation Instructions
-
+## Compilation Instructions
 To compile the encryption and decryption programs, use the following commands:
 
+```sh
 gcc encrypt.c -o encrypt
 gcc decrypt.c -o decrypt
+```
 
-🚀 Usage
+## Usage
 
-🔒 Encryption
-
+### 🔒 Encryption
 To encrypt a file, run:
 
+```sh
 ./encrypt <filename>
+```
 
 Example:
 
+```sh
 ./encrypt secret.txt
+```
 
-This will generate crypt.out (encrypted content) and key.out (encryption key).
+This will generate **`crypt.out`** (encrypted content) and **`key.out`** (encryption key).
 
-🔓 Decryption
-
+### 🔓 Decryption
 To decrypt a file, run:
 
+```sh
 ./decrypt crypt.out key.out
+```
 
 Example:
 
+```sh
 ./decrypt crypt.out key.out
+```
 
-This will restore the original content in decrypt.out.
+This will restore the original content in **`decrypt.out`**.
 
-⚠️ Error Handling
+## Error Handling
+- 🚨 The program **checks for missing input arguments**.
+- 🛑 Handles **file opening errors** and prints relevant error messages.
+- ♻️ Ensures proper **cleanup of file resources** to prevent memory leaks.
 
-The program checks for missing input arguments.
+## Limitations
+- ❌ The encryption method is **simple** and not suitable for highly sensitive data.
+- ❌ If the **key file is lost**, decryption is impossible.
 
-Handles file opening errors and prints relevant error messages.
-
-Ensures proper cleanup of file resources to prevent memory leaks.
-
-⚠️ Limitations
-
-❌ The encryption method is simple and not suitable for highly sensitive data.❌ If the key file is lost, decryption is impossible.❌ Works best with text files; binary files may not be fully supported.
