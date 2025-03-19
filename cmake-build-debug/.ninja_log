@@ -1,0 +1,5 @@
+# ninja log v5
+0	914	7641225941823616	CMakeFiles/encryption.dir/encryption.c.obj	5d2e119d27550a87
+917	1039	7641225943045693	encryption.exe	5012f4c8c22e0248
+1	91	7641226469317128	CMakeFiles/decryption.dir/decryption.c.obj	2b5961bf221abe99
+92	231	7641226470207102	decryption.exe	e08a34ee834bb272
