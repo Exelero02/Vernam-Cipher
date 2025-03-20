@@ -26,8 +26,8 @@ After decryption, the following file is generated:
 To compile the encryption and decryption programs, use the following commands:
 
 ```sh
-gcc encrypt.c -o encrypt
-gcc decrypt.c -o decrypt
+gcc encryption.c -o encrypt
+gcc decryption.c -o decrypt
 ```
 
 ## Usage
@@ -49,12 +49,6 @@ This will generate **`crypt.out`** (encrypted content) and **`key.out`** (encryp
 
 ### 🔓 Decryption
 To decrypt a file, run:
-
-```sh
-./decrypt crypt.out key.out
-```
-
-Example:
 
 ```sh
 ./decrypt crypt.out key.out
